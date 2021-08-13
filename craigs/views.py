@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from bs4 import BeautifulSoup
+import requests
 
 # Create your views here.
 
@@ -8,4 +10,10 @@ def home(request):
 
 
 def new_search(request):
-    return render(request, 'craigs/new_search.html')
+    search=request.POST.get('search')
+    # print(search)
+    stuff_for_frontend = {
+        'search': search,
+    }
+    return render(request, 'craigs/new_search.html',stuff_for_frontend)
+    
