@@ -83,11 +83,6 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'ciba',
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> 4ce8389b6d6dbca9cd2d6e41c10b0d1b17e2d15d
     }
 }
 db_from_env = dj_database_url.config(conn_max_age=500)
