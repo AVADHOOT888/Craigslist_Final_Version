@@ -82,15 +82,11 @@ WSGI_APPLICATION = 'Craigslist.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': BASE_DIR / 'db.sqlite3',
-        'USER': 'admin',
-        'PASSWORD': 'prakash610',
-        'HOST': 'localhost',
-        'PORT': '',
+        'NAME': 'ciba',
+        
     }
 }
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+
 
 WHITENOISE_USE_FINDERS = True
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
